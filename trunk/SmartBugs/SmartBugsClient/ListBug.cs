@@ -66,7 +66,7 @@ namespace SmartBugsClient
 			// 
 			// label2
 			// 
-			this.label2.Location = new System.Drawing.Point(104, 8);
+			this.label2.Location = new System.Drawing.Point(112, 8);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(144, 16);
 			this.label2.TabIndex = 1;
@@ -81,6 +81,7 @@ namespace SmartBugsClient
 			this.Name = "ListBug";
 			this.Text = "ListBug";
 			this.ResumeLayout(false);
+
 		}
 		#endregion
 	}
