@@ -11,8 +11,10 @@ namespace SmartBugsClient
 	/// </summary>
 	public class ListBug : System.Windows.Forms.Form
 	{
-		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.Label label2;
+		// We define the labelArray which will contain labels for the fields fetched
+		// from the XML and dynamically added to the Form
+		private System.Windows.Forms.Label[] labelArray;
+
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
@@ -52,8 +54,10 @@ namespace SmartBugsClient
 		/// </summary>
 		private void InitializeComponent()
 		{
+			// for each label in the labelArray we assign a new System.Windows.Forms
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
+
 			this.SuspendLayout();
 			// 
 			// label1
