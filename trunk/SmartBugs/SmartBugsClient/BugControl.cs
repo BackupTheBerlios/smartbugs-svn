@@ -61,6 +61,13 @@ namespace SmartBugsClient
 			combo = new System.Windows.Forms.ComboBox();
 			combo.Size = new System.Drawing.Size(300, 20);
 			combo.Location = p;
+
+			for (XmlNode field = node.FirstChild; field != null; field = field.NextSibling) 
+			{
+				combo.Items.Add(field.ToString());
+			}
+
+			combo.SelectedIndex = 0;
 		}
 
 		public Control Control { get { return combo; } } 
