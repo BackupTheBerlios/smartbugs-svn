@@ -112,16 +112,6 @@
                     DependentUpon = "ListBug.cs"
                     BuildAction = "EmbeddedResource"
                 />
-                <File
-                    RelPath = "Login.cs"
-                    SubType = "Form"
-                    BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "Login.resx"
-                    DependentUpon = "Login.cs"
-                    BuildAction = "EmbeddedResource"
-                />
             </Include>
         </Files>
     </CSHARP>
