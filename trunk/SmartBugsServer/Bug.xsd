@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
-<xs:schema id="bug" targetNamespace="http://tempuri.org/Bug.xsd" xmlns:mstns="http://tempuri.org/Bug.xsd"
-	xmlns="http://tempuri.org/Bug.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+<xs:schema id="bug" targetNamespace="http://p16.pub.ro/" xmlns:mstns="http://p16.pub.ro"
+	xmlns="http://p16.pub.ro/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
 	attributeFormDefault="qualified" elementFormDefault="qualified">
 	<xs:element name="bug" msdata:IsDataSet="true" msdata:Locale="ro-RO" msdata:EnforceConstraints="False">
 		<xs:complexType>
