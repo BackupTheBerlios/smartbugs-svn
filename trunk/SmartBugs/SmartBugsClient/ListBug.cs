@@ -20,7 +20,6 @@ namespace SmartBugsClient
 		private ArrayList constrols = new ArrayList();
 		private System.Windows.Forms.Button getConfig;
 		private System.Windows.Forms.Panel bugControls;
-		private System.Windows.Forms.TextBox textBox1;
 
 		/// <summary>
 		/// Required designer variable.
@@ -63,7 +62,6 @@ namespace SmartBugsClient
 		{
 			this.getConfig = new System.Windows.Forms.Button();
 			this.bugControls = new System.Windows.Forms.Panel();
-			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.SuspendLayout();
 			// 
 			// getConfig
@@ -86,19 +84,10 @@ namespace SmartBugsClient
 			this.bugControls.Size = new System.Drawing.Size(520, 328);
 			this.bugControls.TabIndex = 3;
 			// 
-			// textBox1
-			// 
-			this.textBox1.Location = new System.Drawing.Point(112, 8);
-			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(120, 20);
-			this.textBox1.TabIndex = 4;
-			this.textBox1.Text = "textBox1";
-			// 
 			// ListBug
 			// 
 			this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
 			this.ClientSize = new System.Drawing.Size(536, 373);
-			this.Controls.Add(this.textBox1);
 			this.Controls.Add(this.bugControls);
 			this.Controls.Add(this.getConfig);
 			this.Name = "ListBug";
@@ -140,7 +129,7 @@ namespace SmartBugsClient
 					label.Text = field.Attributes["title"].Value;
 					bugControls.Controls.Add(label);
 
-					IBugControl control = BugControlFactory.createControl(field, "testing", new Point(160, y));
+					IBugControl control = BugControlFactory.createControl(field, "234", new Point(160, y));
 					if (control != null) 
 					{
 						bugControls.Controls.Add(control.Control);
@@ -159,6 +148,9 @@ namespace SmartBugsClient
 					y += 22;
 
 					Panel group = new Panel();
+					group.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+						| System.Windows.Forms.AnchorStyles.Left) 
+						| System.Windows.Forms.AnchorStyles.Right)));					
 					group.AutoScroll = true;
 					group.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 					group.Location = new System.Drawing.Point(5, y);

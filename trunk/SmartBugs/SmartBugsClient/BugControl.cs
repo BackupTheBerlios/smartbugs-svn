@@ -5,14 +5,10 @@ using System.Windows.Forms;
 
 namespace SmartBugsClient
 {
-	class InvalidTypeException : Exception {};
-
 	interface IBugControl
 	{
 		Control Control { get; }
-		int GetIntValue();
-		string GetStringValue();
-		void SetValue(int val);
+		string GetValue();
 		void SetValue(string val);
 	}
 
@@ -23,7 +19,7 @@ namespace SmartBugsClient
 		public StringControl(XmlNode node, string val, Point p) 
 		{
 			textBox = new TextBox();
-			textBox.Size = new System.Drawing.Size(300, 10);
+			textBox.Size = new System.Drawing.Size(300, 20);
 			textBox.Text = val;
 			textBox.Location = p;
 			if (node.Attributes["length"] != null)
@@ -33,10 +29,27 @@ namespace SmartBugsClient
 		}
 
 		public Control Control { get { return textBox; } }
-		public int GetIntValue() { throw new InvalidTypeException(); }
-		public string GetStringValue() { return textBox.Text; }
-		public void SetValue(int val) { throw new InvalidTypeException(); }
+		public string GetValue() { return textBox.Text; }
 		public void SetValue(string val) { textBox.Text = val; }
+	}
+
+	class BugIDControl : IBugControl
+	{
+		private NumericUpDown numericUpDown;
+
+		public BugIDControl(XmlNode node, string val, Point p) 
+		{
+			numericUpDown = new System.Windows.Forms.NumericUpDown();
+			((System.ComponentModel.ISupportInitialize)(numericUpDown)).BeginInit();
+			numericUpDown.Maximum = new System.Decimal(new int[] {1000000, 0, 0, 0});
+			numericUpDown.Location = p;
+			numericUpDown.Value = int.Parse(val);
+			((System.ComponentModel.ISupportInitialize)(numericUpDown)).EndInit();
+		}
+
+		public Control Control { get { return numericUpDown; } }
+		public string GetValue() { return numericUpDown.Value.ToString(); }
+		public void SetValue(string val) { numericUpDown.Value = decimal.Parse(val); }
 	}
 
 	class BugControlFactory
@@ -45,6 +58,8 @@ namespace SmartBugsClient
 		{
 			if (node.Attributes["type"].Value == "string")
 				return new StringControl(node, val, p);
+			else if (node.Attributes["type"].Value == "id")
+				return new BugIDControl(node, val, p);
 			return null;
 			//throw new Exception("Invalid Control Type Specified");
 		}
