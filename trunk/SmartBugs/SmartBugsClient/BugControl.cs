@@ -52,6 +52,22 @@ namespace SmartBugsClient
 		public void SetValue(string val) { numericUpDown.Value = decimal.Parse(val); }
 	}
 
+	class ComboControl : IBugControl
+	{
+		private ComboBox combo;
+
+		public ComboControl(XmlNode node, string val, Point p)
+		{
+			combo = new System.Windows.Forms.ComboBox();
+			combo.Size = new System.Drawing.Size(300, 20);
+			combo.Location = p;
+		}
+
+		public Control Control { get { return combo; } } 
+		public string GetValue() { return combo.Items[combo.SelectedIndex].ToString(); }
+		public void SetValue(string val) { combo.SelectedIndex = combo.Items.IndexOf(val); }
+	}
+
 	class BugControlFactory
 	{
 		public static IBugControl createControl(XmlNode node, string val, Point p)
@@ -60,6 +76,8 @@ namespace SmartBugsClient
 				return new StringControl(node, val, p);
 			else if (node.Attributes["type"].Value == "id")
 				return new BugIDControl(node, val, p);
+			else if (node.Attributes["type"].Value == "choice")
+				return new ComboControl(node, val, p);
 			return null;
 			//throw new Exception("Invalid Control Type Specified");
 		}
