@@ -12,6 +12,7 @@ namespace SmartBugsClient
 	public class ListBug : System.Windows.Forms.Form
 	{
 		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Label label2;
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
@@ -52,6 +53,7 @@ namespace SmartBugsClient
 		private void InitializeComponent()
 		{
 			this.label1 = new System.Windows.Forms.Label();
+			this.label2 = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -62,15 +64,23 @@ namespace SmartBugsClient
 			this.label1.TabIndex = 0;
 			this.label1.Text = "Bug Title:";
 			// 
+			// label2
+			// 
+			this.label2.Location = new System.Drawing.Point(104, 8);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(144, 16);
+			this.label2.TabIndex = 1;
+			this.label2.Text = "title";
+			// 
 			// ListBug
 			// 
 			this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
 			this.ClientSize = new System.Drawing.Size(292, 266);
+			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
 			this.Name = "ListBug";
 			this.Text = "ListBug";
 			this.ResumeLayout(false);
-
 		}
 		#endregion
 	}
