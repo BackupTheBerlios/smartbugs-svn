@@ -18,9 +18,6 @@ namespace SmartBugsClient
 		private XmlDocument config;
 		private ArrayList labels = new ArrayList();
 		private ArrayList constrols = new ArrayList();
-
-		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Button getConfig;
 		private System.Windows.Forms.Panel bugControls;
 
@@ -64,27 +61,9 @@ namespace SmartBugsClient
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.label1 = new System.Windows.Forms.Label();
-			this.label2 = new System.Windows.Forms.Label();
 			this.getConfig = new System.Windows.Forms.Button();
 			this.bugControls = new System.Windows.Forms.Panel();
 			this.SuspendLayout();
-			// 
-			// label1
-			// 
-			this.label1.Location = new System.Drawing.Point(8, 48);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(80, 16);
-			this.label1.TabIndex = 0;
-			this.label1.Text = "Bug Title:";
-			// 
-			// label2
-			// 
-			this.label2.Location = new System.Drawing.Point(112, 48);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(144, 16);
-			this.label2.TabIndex = 1;
-			this.label2.Text = "title";
 			// 
 			// getConfig
 			// 
@@ -101,9 +80,9 @@ namespace SmartBugsClient
 				| System.Windows.Forms.AnchorStyles.Right)));
 			this.bugControls.AutoScroll = true;
 			this.bugControls.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.bugControls.Location = new System.Drawing.Point(8, 72);
+			this.bugControls.Location = new System.Drawing.Point(8, 40);
 			this.bugControls.Name = "bugControls";
-			this.bugControls.Size = new System.Drawing.Size(520, 296);
+			this.bugControls.Size = new System.Drawing.Size(520, 328);
 			this.bugControls.TabIndex = 3;
 			// 
 			// ListBug
@@ -112,8 +91,6 @@ namespace SmartBugsClient
 			this.ClientSize = new System.Drawing.Size(536, 373);
 			this.Controls.Add(this.bugControls);
 			this.Controls.Add(this.getConfig);
-			this.Controls.Add(this.label2);
-			this.Controls.Add(this.label1);
 			this.Name = "ListBug";
 			this.Text = "ListBug";
 			this.ResumeLayout(false);
