@@ -98,6 +98,10 @@
                     BuildAction = "Compile"
                 />
                 <File
+                    RelPath = "Bug.xml"
+                    BuildAction = "Content"
+                />
+                <File
                     RelPath = "Bug.xsd"
                     BuildAction = "Content"
                 />
