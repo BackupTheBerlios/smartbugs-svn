@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartBugsClient", "SmartBugsClient\SmartBugsClient.csproj", "{E009D95E-F018-42D5-8F5E-AC3B9A632FA3}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartBugsServer", "http://localhost/SmartBugsServer/SmartBugsServer.csproj", "{28E97B32-6A75-4E42-8DB1-A5401A4FF3A4}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{E009D95E-F018-42D5-8F5E-AC3B9A632FA3}.Debug.ActiveCfg = Debug|.NET
+		{E009D95E-F018-42D5-8F5E-AC3B9A632FA3}.Debug.Build.0 = Debug|.NET
+		{E009D95E-F018-42D5-8F5E-AC3B9A632FA3}.Release.ActiveCfg = Release|.NET
+		{E009D95E-F018-42D5-8F5E-AC3B9A632FA3}.Release.Build.0 = Release|.NET
+		{28E97B32-6A75-4E42-8DB1-A5401A4FF3A4}.Debug.ActiveCfg = Debug|.NET
+		{28E97B32-6A75-4E42-8DB1-A5401A4FF3A4}.Debug.Build.0 = Debug|.NET
+		{28E97B32-6A75-4E42-8DB1-A5401A4FF3A4}.Release.ActiveCfg = Release|.NET
+		{28E97B32-6A75-4E42-8DB1-A5401A4FF3A4}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
