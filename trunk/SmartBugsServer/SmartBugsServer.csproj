@@ -95,7 +95,16 @@
             <Include>
                 <File
                     RelPath = "AssemblyInfo.cs"
+                    SubType = "Code"
                     BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Bug.xml"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Bug.xsd"
+                    BuildAction = "Content"
                 />
                 <File
                     RelPath = "Global.asax"
