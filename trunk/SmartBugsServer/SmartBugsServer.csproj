@@ -3,7 +3,7 @@
         ProjectType = "Web"
         ProductVersion = "7.10.3077"
         SchemaVersion = "2.0"
-        ProjectGuid = "{28E97B32-6A75-4E42-8DB1-A5401A4FF3A4}"
+        ProjectGuid = "{347DF848-3A3A-4C6B-8E79-7B51BAF5E0A8}"
     >
         <Build>
             <Settings
@@ -67,28 +67,27 @@
                 <Reference
                     Name = "System"
                     AssemblyName = "System"
-                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.dll"
-                    Private = "False"
+                    HintPath = "..\..\..\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.dll"
                 />
                 <Reference
                     Name = "System.Data"
                     AssemblyName = "System.Data"
-                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Data.dll"
+                    HintPath = "..\..\..\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Data.dll"
                 />
                 <Reference
                     Name = "System.Web"
                     AssemblyName = "System.Web"
-                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Web.dll"
+                    HintPath = "..\..\..\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Web.dll"
                 />
                 <Reference
                     Name = "System.Web.Services"
                     AssemblyName = "System.Web.Services"
-                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Web.Services.dll"
+                    HintPath = "..\..\..\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Web.Services.dll"
                 />
                 <Reference
                     Name = "System.XML"
                     AssemblyName = "System.Xml"
-                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.XML.dll"
+                    HintPath = "..\..\..\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.XML.dll"
                 />
             </References>
         </Build>
@@ -96,21 +95,7 @@
             <Include>
                 <File
                     RelPath = "AssemblyInfo.cs"
-                    SubType = "Code"
                     BuildAction = "Compile"
-                />
-                <File
-                    RelPath = "Bug.xml"
-                    BuildAction = "Content"
-                />
-                <File
-                    RelPath = "Bug.xsd"
-                    BuildAction = "Content"
-                />
-                <File
-                    RelPath = "Bug.xsx"
-                    DependentUpon = "Bug.xsd"
-                    BuildAction = "None"
                 />
                 <File
                     RelPath = "Global.asax"
@@ -130,7 +115,6 @@
                 />
                 <File
                     RelPath = "SmartBugsServer.asmx"
-                    SubType = "Form"
                     BuildAction = "Content"
                 />
                 <File
