@@ -103,6 +103,16 @@
                     BuildAction = "Compile"
                 />
                 <File
+                    RelPath = "ListBug.cs"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "ListBug.resx"
+                    DependentUpon = "ListBug.cs"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
                     RelPath = "Login.cs"
                     SubType = "Form"
                     BuildAction = "Compile"
