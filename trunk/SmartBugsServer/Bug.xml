@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<bug xmlns="http://p16.pub.ro/">
+<bug>
 	<field name="id" title="Bug ID" type="id" />
 	<field name="title" title="Title" type="string" length="100" />
 	<field name="priority" title="Priority" type="priority" />

@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using System.Collections;
 using System.ComponentModel;
 using System.Data;
@@ -47,15 +48,9 @@ namespace SmartBugsServer
 		
 		#endregion
 
-		// WEB SERVICE EXAMPLE
-		// The HelloWorld() example service returns the string Hello World
-		// To build, uncomment the following lines then save and build the project
-		// To test this web service, press F5
-
-//		[WebMethod]
-//		public string HelloWorld()
-//		{
-//			return "Hello World";
-//		}
+		[WebMethod]
+		public void Hello()
+		{
+		}
 	}
 }
