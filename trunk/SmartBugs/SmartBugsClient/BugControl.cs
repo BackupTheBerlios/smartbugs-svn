@@ -62,9 +62,9 @@ namespace SmartBugsClient
 			combo.Size = new System.Drawing.Size(300, 20);
 			combo.Location = p;
 
-			for (XmlNode field = node.FirstChild; field != null; field = field.NextSibling) 
+			for (XmlNode choice = node.FirstChild; choice != null; choice = choice.NextSibling) 
 			{
-				combo.Items.Add(field.ToString());
+				combo.Items.Add(choice.InnerText);
 			}
 
 			combo.SelectedIndex = 0;

@@ -1,4 +1,5 @@
 using System;
+using System.Data;
 using System.Net;
 using System.IO;
 using System.Drawing;
@@ -20,6 +21,7 @@ namespace SmartBugsClient
 		private ArrayList constrols = new ArrayList();
 		private System.Windows.Forms.Button getConfig;
 		private System.Windows.Forms.Panel bugControls;
+		private DataSet dataSet;
 
 		/// <summary>
 		/// Required designer variable.
@@ -110,10 +112,11 @@ namespace SmartBugsClient
 			WebResponse response = request.GetResponse();
 			StreamReader sr = new StreamReader(response.GetResponseStream());
 			configString = sr.ReadToEnd();
+			sr.Close();
+
 			config = new XmlDocument();
 			config.LoadXml(configString);
-			addEditControls(config.FirstChild.NextSibling);
-			sr.Close();
+			addEditControls(config.FirstChild.NextSibling.FirstChild);
 		}
 
 		private void addEditControls(XmlNode node)
