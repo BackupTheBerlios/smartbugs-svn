@@ -2,7 +2,7 @@
 <bug xmlns="http://tempuri.org/Bug.xsd">
     <field name="id" title="Bug ID" type="id" />
     <field name="title" title="Title" type="string" length="100" />
-    <field name="priority" title="Priority" type="dropdown">
+    <field name="priority" title="Priority" type="choice">
         <value>Very High</value>
         <value>High</value>
         <value>Normal</value>
