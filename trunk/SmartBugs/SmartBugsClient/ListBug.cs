@@ -136,11 +136,11 @@ namespace SmartBugsClient
 				{
 					Label label = new Label();
 					label.Location = new System.Drawing.Point(10, y);
-					label.Size = new System.Drawing.Size(380, 16);
+					label.Size = new System.Drawing.Size(150, 16);
 					label.Text = field.Attributes["title"].Value;
 					bugControls.Controls.Add(label);
 
-					IBugControl control = BugControlFactory.createControl(field, "testing", new Point(210, y));
+					IBugControl control = BugControlFactory.createControl(field, "testing", new Point(160, y));
 					if (control != null) 
 					{
 						bugControls.Controls.Add(control.Control);

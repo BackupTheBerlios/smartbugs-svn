@@ -23,7 +23,7 @@ namespace SmartBugsClient
 		public StringControl(XmlNode node, string val, Point p) 
 		{
 			textBox = new TextBox();
-			textBox.Size = new System.Drawing.Size(120, 20);
+			textBox.Size = new System.Drawing.Size(300, 10);
 			textBox.Text = val;
 			textBox.Location = p;
 			if (node.Attributes["length"] != null)
