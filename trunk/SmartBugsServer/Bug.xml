@@ -1,15 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <bug xmlns="http://tempuri.org/Bug.xsd">
-    <field name="id" title="Bug ID" type="id" />
-    <field name="title" title="Title" type="string" length="100" />
-    <field name="priority" title="Priority" type="choice">
-        <value>Very High</value>
-        <value>High</value>
-        <value>Normal</value>
-        <value>Low</value>
-        <value>Very Low</value>
-    </field>
-    <group name="comments" title="Comments">
-        <field name="comment" title="Comment" type="text" />
-    </group>
+	<group name="bugs">
+		<field name="id" title="Bug ID" type="id" />
+		<field name="title" title="Title" type="string" length="100" />
+		<field name="priority" title="Priority" type="choice">
+			<value>Very High</value>
+			<value>High</value>
+			<value>Normal</value>
+			<value>Low</value>
+			<value>Very Low</value>
+		</field>
+		<group name="comments" title="Comments">
+			<field name="comment" title="Comment" type="text" />
+		</group>
+	</group>
 </bug>

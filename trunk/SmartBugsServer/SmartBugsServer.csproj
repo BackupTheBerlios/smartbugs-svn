@@ -103,15 +103,6 @@
                     BuildAction = "Content"
                 />
                 <File
-                    RelPath = "Bug.xsd"
-                    BuildAction = "Content"
-                />
-                <File
-                    RelPath = "Bug.xsx"
-                    DependentUpon = "Bug.xsd"
-                    BuildAction = "None"
-                />
-                <File
                     RelPath = "Global.asax"
                     SubType = "Component"
                     BuildAction = "Content"
